@@ -8,12 +8,14 @@
     <div class="container-center-float container-fluid">
       <div id="full-article-container">
         <?php just_custom_image($post->ID, 'featured_img'); ?>
-        <div class="date"> 
-          <?php $MonthDay = DateTime::createFromFormat('Y-m-d', $Date);
-          echo $MonthDay->format('F d, '); ?>
-          <span class="year">
-            <?php $Year = DateTime::createFromFormat('Y-m-d', $Date);
-            echo $Year->format('Y'); ?></span>
+        <?php if ($Date != null) { ?>
+          <div class="date"> 
+            <?php $MonthDay = DateTime::createFromFormat('Y-m-d', $Date);
+            echo $MonthDay->format('F d, '); ?>
+            <span class="year">
+              <?php $Year = DateTime::createFromFormat('Y-m-d', $Date);
+              echo $Year->format('Y'); ?></span>
+            <?php } ?>
         </div>
         <div class="clear"> </div>
         <?php the_post(); ?>

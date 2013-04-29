@@ -26,37 +26,16 @@
 <body>
 <div id="wrapper" class="hfeed">
     <div id="header">
-        <div id="masthead">
- 
-            <div id="access">
-<div class="navbar">
-    <div class="navbar-inner">
-        <div class="container-center-float container-fluid">
-            <a href="/" class="brand">ifit</a>
-            <ul class="main-navbar">
-                <li class="main-nav-li nav-2"></li>
-                <li class="main-nav-li nav-2"></li>
-                </ul><div id="tour-anchor-welcome"></div>
-                <div id="tour-anchor-settings"></div>
-                <div id="tour-anchor-create"></div>
-                <div id="tour-anchor-log"></div>
-                <div id="tour-anchor-goal"></div>
-                <div id="tour-anchor-challenges"></div>
-                <div class="notifications">
-                    <ul>
-                        <li class="prelogin-nav"><a href="/articles/all">Blog</a></li>
-                        <li class="prelogin-nav"><a href="https://www.ifit.com/">Home</a></li>
-                    </ul>
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="container-center-float container-fluid">
+                    <a href="www.ifit.com" class="brand">ifit</a>
+                    <a href="/articles/all" class="nav">Blog</a>
+                    <a href="https://www.ifit.com/" class="nav">Home</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-        <!--<div class="skip-link"><a href="#content" title="<?php _e( 'Skip to content', 'hbd-theme' ) ?>"><?php _e( 'Skip to content', 'hbd-theme' ) ?></a></div>
-        <?php #wp_page_menu( 'sort_column=menu_order' ); ?>
-        <?php wp_nav_menu( array( 'sort_column' => 'menu_order', 'container_class' => 'menu-header' ) ); ?>-->
-            </div><!-- #access -->
-      
-        </div><!-- #masthead -->
+
     </div><!-- #header -->
  
     <div id="main">

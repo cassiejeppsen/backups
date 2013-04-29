@@ -1,3 +1,6 @@
+
+<!-- This content is used for category.php and index.php -->
+
 <?php get_header(); ?>
 
 <div id="main" class="container-fluid" style="min-height: 706px;">
@@ -67,9 +70,11 @@
                   </p>
                   <div class="blog-details">
                     <?php $Date = get_post_meta($post->ID, 'date', true); ?>
-                    <p class="date-light"><?php 
-                        $longDate = DateTime::createFromFormat('Y-m-d', $Date);
-                        echo $longDate->format('F d, Y'); ?></p>
+                    <?php if ($Date != null) { ?>
+                      <p class="date-light"><?php 
+                          $longDate = DateTime::createFromFormat('Y-m-d', $Date);
+                          echo $longDate->format('F d, Y'); ?></p>
+                    <?php } ?>
                     <div class="clear"></div>
                   </div>
 
