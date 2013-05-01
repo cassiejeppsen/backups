@@ -9,15 +9,15 @@
         elseif ( is_404() ) { bloginfo('name'); print ' | Not Found'; }
         else { bloginfo('name'); wp_title('|'); get_page_number(); }
     ?></title>
- 
+
     <meta http-equiv="content-type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
- 
+
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" />
- 
+
     <?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 
-    
- 
+
+
     <link rel="alternate" type="application/rss+xml" href="<?php bloginfo('rss2_url'); ?>" title="<?php printf( __( '%s latest posts', 'hbd-theme' ), wp_specialchars( get_bloginfo('name'), 1 ) ); ?>" />
     <link rel="alternate" type="application/rss+xml" href="<?php bloginfo('comments_rss2_url') ?>" title="<?php printf( __( '%s latest comments', 'hbd-theme' ), wp_specialchars( get_bloginfo('name'), 1 ) ); ?>" />
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
@@ -29,7 +29,7 @@
         <div class="navbar">
             <div class="navbar-inner">
                 <div class="container-center-float container-fluid">
-                    <a href="www.ifit.com" class="brand">ifit</a>
+                    <a href="https://www.ifit.com/" class="brand">ifit</a>
                     <a href="/articles/all" class="nav">Blog</a>
                     <a href="https://www.ifit.com/" class="nav">Home</a>
                     </div>
@@ -37,5 +37,5 @@
             </div>
 
     </div><!-- #header -->
- 
+
     <div id="main">
