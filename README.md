@@ -199,9 +199,6 @@ p {
 This will output a font size of 1.3rem and a fall back of 13px. This mixin is assumes that the root (HTML) element has this style: `html { font-size: 62.5%; } ` Don't ever change that, or the fonts will be going off of base 16 instead of base 10.
 
 
-##Responsive Content
-
-
 ##Basic Architecture of Our LESS
 
 bootstrap.less: Don't touch this file. If you need to edit the elements in bootstrap.less, do it in the base.less file. This file contains all of the less taken straight from bootstrap, included the responsive features.
