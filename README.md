@@ -14,13 +14,13 @@ page-by-page files: These files contain all of the styles that are page specific
 
 ##General
 
-Use 2 space indents
-Don't leave trailing whitespace
-Use hyphen delimited class names
-Use multi-line LESS
-Declarations in logical order, generally following when each element appears on the page
-Always include the final semi-colon in a ruleset
-Any measurement that is set to 0 should not have units attached. Simply use 0. 
+*Use 2 space indents
+*Don't leave trailing whitespace
+*Use hyphen delimited class names
+*Use multi-line LESS
+*Declarations in logical order, generally following when each element appears on the page
+*Always include the final semi-colon in a ruleset
+*Any measurement that is set to 0 should not have units attached. Simply use 0.
 
 
 ##Section Titles
@@ -67,7 +67,7 @@ THESE ARE NOT OK:
 You get the picture.
 
 ##Other Comments
-Other comments in the LESS files can simply use the format: /* Comment */
+Other comments in the LESS files can simply use the format: `/* Comment */`
 Take out unnecessary comments before committing.
 
 ##Shorthand
@@ -113,7 +113,7 @@ Whilst it is true that browsers will only ever keep getting faster at rendering 
 
 ##Selector Intent
 
-<b>Use selectors to target only specifically what you want,</b> don't use blanket styles just because that is the way the page was layed out. It is often best to put a class on the element you explicitly want to style. <a href="http://csswizardry.com/2012/07/shoot-to-kill-css-selector-intent/">CSS Wizardry </a> has a nice example of this:
+**Use selectors to target only specifically what you want,* don't use blanket styles just because that is the way the page was layed out. It is often best to put a class on the element you explicitly want to style. <a href="http://csswizardry.com/2012/07/shoot-to-kill-css-selector-intent/">CSS Wizardry </a> has a nice example of this:
 
 "Let’s take a specific example with a selector like .header ul{}...
 
@@ -123,7 +123,7 @@ Whilst it is true that browsers will only ever keep getting faster at rendering 
 
 "Make sure your key selector is never an element/type selector or object/abstraction class. You never really want to see selectors like .sidebar ul{} or .footer .media{} in our theme stylesheets.
 
-" <b> Be explicit; target the element you want to affect, not its parent. Never assume that markup won’t change. Write selectors that target what you want, not what happens to be there already. </b>
+" **Be explicit; target the element you want to affect, not its parent. Never assume that markup won’t change. Write selectors that target what you want, not what happens to be there already. **
 
 Of course, there are always exceptions. Sometimes, the most logical thing to do is to use a blanket selector such as li if you want every list on the page to look the same. Bottom line, use your noggin and know when each are appropriate.
 
