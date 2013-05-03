@@ -1,6 +1,6 @@
 #LESS Style Guide
 
-##General
+##iFit LESS 101
 
 * Use 2 space indents
 * Don't leave trailing whitespace
@@ -8,16 +8,16 @@
 * Use multi-line LESS
 * Declarations in logical order, generally following when each element appears on the page
 * Always include the final semi-colon in a ruleset
-* Any measurement that is set to 0 should not have units attached. Simply use 0.
+* Any measurement that is set to 0 should not have units attached, simply use 0
 
 
 ##Section Titles
 
-Use section titles every time you begin the code for a "new section" within a large less file. The section titles will start with a $ followed by the section name with no spaces. If it is necessary, a description line may be added beneath the title (spaces are fine here). These needs to be inclosed in 2 lines that are made up of a slash and 57 stars. Yes, 57. Please copy and paste section titles so that they are uniform.
+Use section titles every time you begin the code for a "new section" within a large less file. The section titles will start with a $ followed by the section name with no spaces. If it is necessary, a description line may be added beneath the title (spaces are fine here). These needs to be enclosed in 2 lines that are made up of a slash and 57 stars. Yes, 57. Please copy and paste section titles so that they are uniform.
 
 THIS IS OK:
 
-```javascript
+```
 
 /*********************************************************
 
@@ -30,7 +30,7 @@ THIS IS OK:
 
 THESE ARE NOT OK:
 
-```javascript
+```
 
 /*********************************************************
 
@@ -39,14 +39,14 @@ THESE ARE NOT OK:
 *********************************************************/
 
 ```
-```javascript
+```
 
 /*------------------------------------*\
     $Buttons
 \*------------------------------------*/
 
 ```
-```javascript
+```
 
 /*--------- Button section ------------*/
 
@@ -62,22 +62,13 @@ Take out unnecessary comments before committing.
 
 To keep our LESS as concise as possible, do not overuse shorthand. For example, if you only want to remove the margin from the bottom of an element, don't use `margin:0;` use `margin-bottom:0;` The expression `margin:0` is perfectly fine to use if that is what you want, but be explicit in which properties you set.
 
-Take care that you do not inadvertently set or unset other styles with the use of shorthand.
-
-##IDs
-
-I'll make a brief statment about IDs here:
-
-Don't use IDs in LESS.!
-
-IDs are more than fine to be used in markup, but only use classes for styling.
-
+Take care that you do not inadvertently set or un-set other styles with the use of shorthand.
 
 ##Selectors
 
 Selectors need to be short, efficient and portable.
 
-Heavily location-based selectors are very bad. For starters, they decrease class portability. If we have `.sidebar h3 span{}`, we can't move the h3 or the span outside of the the sidebar and maintain styling. If this is what we have intented, then great. Many times, however, this is unintended, and we end up writing those styles another two or three times.
+Heavily location-based selectors are very bad. For starters, they decrease class portability. If we have `.sidebar h3 span{}`, we can't move the h3 or the span outside of the sidebar and maintain styling. If this is what you were intending to do, then that is fine. Many times, however, this is unintended, and we end up writing those styles another two or three times.
 
 Selectors which are too long (not in name, but in location) also introduce performance issues; the more checks in a selector (e.g. `.sidebar h3 span` has three checks, `.content ul p a` has four), the more work the browser has to do.
 
@@ -96,7 +87,7 @@ Of course sometimes you will want to qualify a class with an element (e.g. if yo
 
 ###Maximizing Selector Performance
 
-Whilst it is true that browsers will only ever keep getting faster at rendering CSS, efficiency is something to keep an eye on. As we start catering to devices with smaller bandwidths, lean, effecient LESS will decrease loading time. Short, unnested selectors, not using the universal (*{}) selector as the key selector, and avoiding more complex CSS3 selectors should help circumvent these problems.
+Whilst it is true that browsers will only ever keep getting faster at rendering CSS, efficiency is something to keep an eye on. As we start catering to devices with smaller bandwidths, lean, efficient LESS will decrease loading time. Short, unnested selectors, not using the universal (*{}) selector as the key selector, and avoiding more complex CSS3 selectors should help circumvent these problems.
 
 ##Selector Intent
 
@@ -104,7 +95,7 @@ Whilst it is true that browsers will only ever keep getting faster at rendering 
 
 "Let’s take a specific example with a selector like .header ul{}...
 
-"Let’s imagine that ul is indeed the main navigation for our website. It lives in the header as you might expect and is currently the only ul in there; .header ul{} will work, but it’s not ideal or advisable. It’s not very future proof and certainly not explicit enough. As soon as we add another ul to that header it will adopt the styling of our main nav and the the chances are it won’t want to. This means we either have to refactor a lot of code or undo a lot of styling on su bsequent uls in that .header to remove the effects of the far reaching selector.
+"Let’s imagine that ul is indeed the main navigation for our website. It lives in the header as you might expect and is currently the only ul in there; .header ul{} will work, but it’s not ideal or advisable. It’s not very future proof and certainly not explicit enough. As soon as we add another ul to that header it will adopt the styling of our main nav and the chances are it won’t want to. This means we either have to refactor a lot of code or undo a lot of styling on subsequent uls in that .header to remove the effects of the far reaching selector.
 
 "Your selector’s intent must match that of your reason for styling something; ask yourself ‘am I selecting this because it’s a ul inside of .header or because it is my site’s main nav?’. The answer to this will determine your selector.
 
@@ -117,6 +108,13 @@ Of course, there are always exceptions. Sometimes, the most logical thing to do 
 ##!important
 Use !important with caution. Preferably, only use !important when you have a style you know you ALWAYS want to take preference, like .error{ color:red!important }. It is NOT advised to simply use !important reactively to get yourself out of a tight spot. Always try to rework your LESS to fix the problem first. This is where using short selectors and avoiding IDs comes in handy.
 
+##IDs
+
+I'll make a brief statment about IDs here:
+
+Don't use IDs in LESS.!
+
+IDs are more than fine to be used in markup, but only use classes for styling.
 
 #Responsive Guidelines
 
@@ -132,11 +130,11 @@ Please keep the following in mind when using the grid system:
 
 All spans that you add should be left totally free of widths; they should always remain fluid and their widths should be governed by the bootstrap grid system.
 
-Heights should never be be applied to elements. Heights should only be applied to things which had dimensions before they entered the site (i.e. images and sprites). Never ever set heights on ps, uls, divs, anything. Try accomplishing the desired effect instead by using line-heights. Generally this works just as well and is much more flexible.
+Heights should never be be applied to elements. Heights should only be applied to things that had dimensions before they entered the site (i.e. images and sprites). Never ever set heights on ps, uls, divs, anything. Try accomplishing the desired effect instead by using line-heights. Generally this works just as well and is much more flexible.
 
 ##Media Queries
 
-Responsive Bootstrap convieniently comes with built in media queries, so these are what we are going to be using. Here is what is included:
+Responsive Bootstrap conveniently comes with built in media queries, so these are what we are going to be using. Here is what is included:
           <table class="table table-bordered table-striped">
             <thead>
               <tr>
@@ -180,7 +178,7 @@ Responsive Bootstrap convieniently comes with built in media queries, so these a
 
 ##Font Sizes
 
-Use the rem units for all fonts, with a fall back pixal unit.  To make our LESS clean, we will use this mixin:
+Rem is the unit of choice for our fonts. However, rem is not supported in ie8 and below, so we will need to add pixels fallbacks as well.  To keep our LESS clean and simple, we will use this mixin (will be located in shared.less):
 
 ```
 .font-size(@sizeValue){
@@ -198,7 +196,7 @@ p {
 }
 ```
 
-This will give us a font size of 1.3rem and a fall back of 13px. This mixin is assumes that the root (HTML) element has this style: `html { font-size: 62.5%; } ` So don't ever change that!
+This will output a font size of 1.3rem and a fall back of 13px. This mixin is assumes that the root (HTML) element has this style: `html { font-size: 62.5%; } ` Don't ever change that, or the fonts will be going off of base 16 instead of base 10.
 
 
 ##Responsive Content
@@ -217,6 +215,5 @@ shared.less: Contains all mixins and set values.s
 modal.less: contains all styles for modals.
 
 page-by-page files: These files contain all of the styles that are page specific. Use as many of the styles from the base folder as possible. Do not modify base elements, such as the H3  tag. For example, instead of using `.equipment h3 {}`, try creating a class called `.equipment-title {}` and add styles to that. For more information, see the Selector Intent section.
-
 
 
